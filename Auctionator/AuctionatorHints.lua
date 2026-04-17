@@ -462,7 +462,7 @@ tinsert (dustsAndEssences, GREATER_COSMIC)
 tinsert (dustsAndEssences, LESSER_COSMIC)
 tinsert (dustsAndEssences, ABYSS_CRYSTAL)
 
-gAtr_dustCacheIndex = 1;
+gAtr_dustCacheIndex = 0;
 local dustCacheState = 0;
 
 -----------------------------------------
@@ -477,6 +477,10 @@ function Atr_GetNextDustIntoCache()		-- make sure all the dusts and essences are
 	local itemString	= "item:"..itemID..":0:0:0:0:0:0:0";
 	
 	local itemName, itemLink = GetItemInfo(itemString);
+
+	if (AtrScanningTooltip == nil) then
+		return;
+	end
 	
 	if (itemLink == nil and dustCacheState == 0) then
 		dustCacheState = 1;

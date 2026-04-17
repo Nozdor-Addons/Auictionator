@@ -523,7 +523,7 @@ function Atr_OnLoad()
 
 	------------------
 
-	CreateFrame( "GameTooltip", "AtrScanningTooltip" ); -- Tooltip name cannot be nil
+	AtrScanningTooltip = CreateFrame( "GameTooltip", "AtrScanningTooltip" );
 	AtrScanningTooltip:SetOwner( WorldFrame, "ANCHOR_NONE" );
 	-- Allow tooltip SetX() methods to dynamically add new lines based on these
 	AtrScanningTooltip:AddFontStrings(
@@ -533,6 +533,10 @@ function Atr_OnLoad()
 	------------------
 
 	Atr_InitDETable();
+
+	if (gAtr_dustCacheIndex == 0) then
+		gAtr_dustCacheIndex = 1;
+	end
 
 	if ( IsAddOnLoaded("Blizzard_AuctionUI") ) then		-- need this for AH_QuickSearch since that mod forces Blizzard_AuctionUI to load at a startup
 		Atr_Init();
