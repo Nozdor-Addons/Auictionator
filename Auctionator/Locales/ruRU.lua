@@ -235,5 +235,6 @@ AtrL["Default Auctionator tab"] = "Окно по умолчанию"
 AtrL["Show auction house prices in tooltips"] = "Отображать в подсказках цену на аукционе"
 AtrL["Show disenchant prices in tooltips"] = "Отображать в подсказках стоимость распыления"
 AtrL["Show vendor prices in tooltips"] = "Отображать в подсказках цену у торговца"
+AtrL["Auctionator: prices are recorded while you browse the auction house. Auctionator tabs are not available in this auction window."] = "Auctionator: цены запоминаются, пока вы просматриваете аукцион. Вкладки Auctionator в этом окне аукциона недоступны."
 
 end

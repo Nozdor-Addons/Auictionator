@@ -162,9 +162,26 @@ end
 
 -----------------------------------------
 
+local kAuctionFrameEvents = {
+	AUCTION_ITEM_LIST_UPDATE	= true,
+	AUCTION_OWNED_LIST_UPDATE	= true,
+	AUCTION_MULTISELL_START		= true,
+	AUCTION_MULTISELL_UPDATE	= true,
+	AUCTION_MULTISELL_FAILURE	= true,
+	AUCTION_HOUSE_SHOW			= true,
+	AUCTION_HOUSE_CLOSED		= true,
+	NEW_AUCTION_UPDATE			= true,
+};
+
 function Atr_EventHandler()
 
 --	zc.md (event);
+
+	-- Панели создаёт Atr_Init при загрузке Blizzard_AuctionUI. На аукционе NOZDOR
+	-- стоковое окно не грузится, панелей нет, а события приходят (AuctionatorNozdor.lua).
+	if (not AuctionatorInited and kAuctionFrameEvents[event]) then
+		return;
+	end
 
 	if (event == "VARIABLES_LOADED")			then	Atr_OnLoad(); 					end;
 	if (event == "ADDON_LOADED")				then	Atr_OnAddonLoaded(); 			end;
