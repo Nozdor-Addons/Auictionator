@@ -33,7 +33,6 @@ AuctionatorAPI.lua
 AuctionatorConfig.lua
 AuctionatorBuy.lua
 AuctionatorNozdor.lua
-AuctionatorNozdorShop.lua
 
 AuctionatorConfig.xml
 
