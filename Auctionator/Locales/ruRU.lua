@@ -236,5 +236,18 @@ AtrL["Show auction house prices in tooltips"] = "Отображать в под�
 AtrL["Show disenchant prices in tooltips"] = "Отображать в подсказках стоимость распыления"
 AtrL["Show vendor prices in tooltips"] = "Отображать в подсказках цену у торговца"
 AtrL["Auctionator: prices are recorded while you browse the auction house. Auctionator tabs are not available in this auction window."] = "Auctionator: цены запоминаются, пока вы просматриваете аукцион. Вкладки Auctionator в этом окне аукциона недоступны."
+AtrL["Shopping Lists"] = "Списки покупок"
+AtrL["New list"] = "Новый список"
+AtrL["Delete list"] = "Удалить список"
+AtrL["Search list"] = "Искать по списку"
+AtrL["Type an item name or Shift-click an item"] = "Название предмета или Shift+клик по предмету"
+AtrL["Left click: search. Right click: remove from list."] = "ЛКМ — искать, ПКМ — убрать из списка."
+AtrL["Name of the new shopping list:"] = "Название нового списка покупок:"
+AtrL["Delete shopping list \"%s\"?"] = "Удалить список покупок «%s»?"
+AtrL["Searching %d of %d..."] = "Поиск: %d из %d..."
+AtrL["Found: %d"] = "Найдено: %d"
+AtrL["Nothing found"] = "Ничего не найдено"
+AtrL["Available"] = "Доступно"
+AtrL["Add"] = "Добавить"
 
 end
