@@ -105,7 +105,9 @@ watcher:SetScript("OnEvent", function(self, event, ...)
 	if event == "AUCTION_HOUSE_SHOW" then
 		if IsNozdorAuctionHouse() and not noticeShown then
 			noticeShown = true;
-			zc.msg_ex({ r = 0, g = 1, b = 1 }, ZT("Auctionator: prices are recorded while you browse the auction house. Auctionator tabs are not available in this auction window."));
+			if DEFAULT_CHAT_FRAME then
+				DEFAULT_CHAT_FRAME:AddMessage(ZT("Auctionator: prices are recorded while you browse the auction house. Auctionator tabs are not available in this auction window."), 0, 1, 1);
+			end
 		end
 	elseif event == "AUCTION_HOUSE_BROWSE_RESULTS_UPDATED" then
 		RecordBrowseResults(C_AuctionHouse.GetBrowseResults());
